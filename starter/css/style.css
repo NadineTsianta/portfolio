@@ -1,0 +1,194 @@
+:root {
+ --background: #E8EAF6;
+ --gray: #465c73;
+ --dardgray: #002121;
+ --tiles:  #bfdad9;
+ --variant: #008585;
+ --details: #590085;
+ --accents: #718181;
+ --light-accent: #B39DDB;
+ --black:#001313;
+ --light: #fff
+}
+body {
+  background-color: var(--background);
+  margin: 0;
+  font-family: 'Karla', sans-serif;
+}
+
+ .navbar {
+  background-color: var(--gray);
+  color: var(--light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 45px;
+  }
+  #nav {
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  #nav {
+    list-style: none;
+  }
+  #nav li {
+    margin-left: 20px;
+  }
+  #nav a {
+    color: var(--light);
+    font-size: 1.3rem;
+    text-decoration: none;
+  }
+  .tophero {
+    background-color: var(--background);
+    padding: 50px 45px;
+    display: flex;
+    justify-content: center; 
+  }
+
+   #about img {
+    max-width: 150px;
+    border-radius: 40px;
+    object-fit: contain;
+    float: left;
+    padding: 10px;
+   }
+
+
+  #about {
+   max-width: 800px;
+  }
+
+
+  .tophero h1 {
+  font-weight: bold;
+  font-size: 42px;
+  background-color: var(--background);
+  color: var(--dardgray); 
+  border-bottom: 3px solid var(--details);
+ }
+ .tophero p {
+  font-size: 17px;
+  line-height: 1.4;
+  color: var(--dardgray);
+ }
+ .mainArea {
+  background-color: var(--background);
+  padding: 60px 40px 60px 160px;
+  
+ }
+ .mainArea h1{
+  font-weight: bold;
+  font-size: 42px;
+  background-color: var(--background);
+  color: var(--dardgray);  
+  border-bottom: 3px solid var(--details);
+  padding: 0px 5px;
+  margin: 30px 0px 30px 85px;
+  display: flex;
+ }
+
+ .tiles {
+  max-width: 1200px;
+  margin: 0 5%;
+  display: grid;
+  grid-template-rows: 150px 150px 150px;
+  grid-template-columns: 65% 35%;
+  grid-template-areas:
+  "horiseon inprogress"
+  "horiseon github"
+  "horiseon github";
+ }
+
+ #horiseon {
+  grid-area: horiseon;
+  background-image: url("../images/Horiseon.png");
+ }
+
+ #github {
+  grid-area: github;
+  background-image: url("../images/pexels\ \(1\).jpg");
+ }
+ #inprogress {
+  grid-area: inprogress;
+  background-image: url("../images/technology-background-.jpg");
+ }
+
+ .mainGridArea {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px;
+  cursor: pointer;
+  display: grid;
+  align-content: end;
+ }
+ 
+ .heading {
+  background-color: var(--light-accent);
+  padding: 10px;
+  height: 20px;
+  color: var(--light);
+  font-size: 1rem;
+  border-bottom: 3px solid var(--gray);
+ }
+
+ .footer {
+    background-color: var(--accents);
+    color: var(--light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 55px;
+    margin-top: 13px;
+    }
+    
+   #contactDetails {
+    margin: 0;
+    padding: 0;
+    display: flex;
+   }
+  
+   #contactDetails {
+    list-style: none;
+   }
+   #contactDetails li {
+    margin-left: 20px;
+    text-decoration: none; 
+   }
+   #contactDetails a {
+    color: var(--light);
+    text-decoration: none;
+   }
+   
+
+ @media screen and (max-width: 1000px) {
+  #nav {
+    display: none;
+  }
+
+  #about {
+    position: static;
+    margin: 10px;
+    padding-bottom: 50px;
+  }
+
+  #about img {
+ height: 35%;
+ width: 30%;
+  }
+
+ .mainArea {
+  padding: 40px 20px;
+ }
+ .tiles {
+  grid-template-rows: 150px 150 150px;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+  "horiseon"
+  "github"
+  "inprogress";
+ }
+
+ }
